@@ -21,7 +21,7 @@ public class FindMinCostForTickets {
                 continue;
             }
             
-            // conditions
+            // Three conditions
             // Check for 1 day
             dp[day] = costs[0] + dp[day - 1];
             
