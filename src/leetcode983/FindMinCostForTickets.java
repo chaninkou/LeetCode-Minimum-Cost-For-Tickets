@@ -8,7 +8,7 @@ public class FindMinCostForTickets {
         
         boolean[] markedVisit = new boolean[lastDay + 1];
         
-        // Mark any day visited
+        // Mark any day as visited
         for(int day : days){
         	markedVisit[day] = true;
         }
@@ -24,10 +24,8 @@ public class FindMinCostForTickets {
             // Three conditions
             // Check for 1 day
             dp[day] = costs[0] + dp[day - 1];
-            
             // Check for 7 day
             dp[day] = Math.min(costs[1] + dp[Math.max(day - 7, 0)], dp[day]);
-            
             // Check for 30 day
             dp[day] = Math.min(costs[2] + dp[Math.max(day - 30, 0)],dp[day]);
         }
