@@ -22,11 +22,11 @@ public class FindMinCostForTickets {
             }
             
             // Three conditions
-            // Check for 1 day
+            // Check for 1 day...
             dp[day] = costs[0] + dp[day - 1];
-            // Check for 7 day
+            // Check for 7 day...
             dp[day] = Math.min(costs[1] + dp[Math.max(day - 7, 0)], dp[day]);
-            // Check for 30 day
+            // Check for 30 day..
             dp[day] = Math.min(costs[2] + dp[Math.max(day - 30, 0)],dp[day]);
         }
         
