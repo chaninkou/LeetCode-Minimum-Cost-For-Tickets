@@ -15,7 +15,7 @@ public class FindMinCostForTickets {
         
         // No need to do 365 days
         for(int day = 1; day < dp.length; day++){
-        	// Skip if not traveling that day
+        	// Skip if not travel that day
             if(!markedVisit[day]){
                 dp[day] = dp[day - 1];
                 continue;
